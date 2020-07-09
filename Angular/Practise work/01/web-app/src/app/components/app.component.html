@@ -1,0 +1,20 @@
+<h1>{{ title }}</h1>
+<h1>{{ getStr() }}</h1>
+<h1>{{ "Value =" + value }}</h1>
+
+<a
+  [href]="link"
+  [target]="openMode"
+  [class.hidden]="isHidden"
+  [class]="classList"
+  >Google</a
+>
+<div
+  (click)="sayHello($event)"
+  [style.width.%]="isHidden ? 50 : 25"
+  class="circle"
+></div>
+
+<button (click)="sayHello($event)">Say hello</button>
+
+<input type="text" (change)="onInputChange($event)" />
