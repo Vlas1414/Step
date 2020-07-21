@@ -1,0 +1,36 @@
+<div class="main">
+  <div class="sideBar">
+    <div class="photo">
+      <img class="photo__img" src="../../assets/photo.jpg" />
+    </div>
+  </div>
+  <div class="content">
+    <div class="header content__header">
+      <span class="name">{{ person.firstname }}</span>
+      <span class="sername">{{ person.lastname }}</span>
+      <span class="career">{{ person.career }}</span>
+      <div class="hobbies">
+        <span *ngFor="let h of person.hobbies" class="circle">{{ h }}</span>
+      </div>
+    </div>
+    <hr />
+    <div class="info">
+      <span class="info__box">
+        <div class="info__title">Возраст</div>
+        <div class="info__text">{{ person.age }}</div>
+      </span>
+      <span class="info__box">
+        <div class="info__title">Адрес</div>
+        <div class="info__text">{{ person.location }}</div>
+      </span>
+      <span class="info__box">
+        <div class="info__title">Телефон</div>
+        <div class="info__text">{{ person.phone }}</div>
+      </span>
+      <span class="info__box">
+        <div class="info__title">Email</div>
+        <div class="info__text">{{ person.email }}</div>
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$color-textBlackGray: #6d6d6d;
+$color-textGray: #939393;
+* {
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  height: 100vh;
+  .sideBar {
+    width: 340px;
+    background-color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    .photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 100%;
+      overflow: hidden;
+      &__img {
+        width: 100%;
+      }
+    }
+  }
+  .content {
+    margin: 0px 50px;
+    width: 100%;
+    &__header {
+      margin: 85px 0px;
+      display: flex;
+      flex-direction: column;
+    }
+    .name {
+      color: $color-textGray;
+      font-size: 40px;
+      line-height: 30px;
+    }
+    .sername {
+      color: #f8bb10;
+      font-size: 50px;
+      line-height: 40px;
+    }
+    .career {
+      color: $color-textGray;
+      margin-top: 20px;
+    }
+    .hobbies {
+      margin-top: 25px;
+      .circle {
+        border: 1px solid gray;
+        border-radius: 20px;
+        margin-right: 10px;
+        padding: 5px 10px;
+      }
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      &__box {
+        margin-right: 10px;
+      }
+      &__title {
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: $color-textBlackGray;
+      }
+      &__text {
+        font-size: 14px;
+        color: $color-textGray;
+        font-family: "Fira Sans", sans-serif;
+      }
+    }
+  }
+}
