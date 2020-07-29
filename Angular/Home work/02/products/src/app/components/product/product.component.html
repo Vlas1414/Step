@@ -1,0 +1,10 @@
+<div class="product__name">{{ value.name }}</div>
+<div class="product__description">{{ value.description }}</div>
+<div class="product__category">{{ value.category }}</div>
+<div class="product__price">{{ value.price }}$</div>
+<button class="btn btn_bgRed product__btn" (click)="deleteItem()">
+  Удалить
+</button>
+<button class="btn btn_bgBlue product__btn" (click)="editItem()">
+  Редактировать
+</button>

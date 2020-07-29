@@ -1,0 +1,25 @@
+<p *ngIf="isVisible">directive-demo works!</p>
+<ul>
+  <li
+    *ngFor="
+      let item of items;
+      index as idx;
+      even as even;
+      odd as odd;
+      first as first;
+      last as last
+    "
+  >
+    <div *ngIf="even" class="even">{{ idx }} - {{ item }}</div>
+    <div *ngIf="odd" class="odd">{{ idx }} - {{ item }}</div>
+    <div *ngIf="first" class="first">{{ idx }} - {{ item }}</div>
+    <div *ngIf="last" class="last">{{ idx }} - {{ item }}</div>
+  </li>
+</ul>
+
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'Yellow'" style="color: yellow;">Hello</div>
+  <div *ngSwitchCase="'Green'" style="color: green;">Hello</div>
+  <div *ngSwitchCase="'Blue'" style="color: blue;">Hello</div>
+  <div *ngSwitchDefault>Hello</div>
+</div>

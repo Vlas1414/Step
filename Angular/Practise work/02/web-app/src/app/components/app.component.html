@@ -1,0 +1,14 @@
+<h1>{{ title }}</h1>
+<person
+  *ngFor="let p of people"
+  [person]="p"
+  (removeEvent)="removePerson($event)"
+  (editEvent)="editPerson($event)"
+></person>
+
+<list (viewItemEvent)="itemSelect($event)">
+  <item [value]="'Default'" (click)="itemSelect('Default')"></item>
+</list>
+<item-info></item-info>
+<directive-demo></directive-demo>
+<form-demo></form-demo>

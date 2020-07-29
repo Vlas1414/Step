@@ -1,0 +1,16 @@
+<button class="btn btn_bgGreen" (click)="addItem()">Добавить продукт</button>
+<div class="products">
+  <product
+    *ngFor="let p of products"
+    class="product"
+    [value]="p"
+    (deleteEvent)="deleteItem($event)"
+    (editEvent)="editItem($event)"
+  ></product>
+</div>
+<popup
+  [isShow]="isPopupShow"
+  [product]="selectProduct"
+  (closePopup)="closePopup()"
+  (savePopup)="savePopup($event)"
+></popup>

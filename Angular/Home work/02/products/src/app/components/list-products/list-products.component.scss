@@ -1,0 +1,16 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px dotted gainsboro;
+  width: max-content;
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 5px 5px 5px gainsboro;
+  }
+}

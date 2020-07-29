@@ -1,0 +1,57 @@
+.popup {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  font-size: 20px;
+
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  &__box {
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    .close-btn {
+      width: 27px;
+      height: 27px;
+      float: right;
+
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      cursor: pointer;
+      border-radius: 4px;
+      transition: 0.3s;
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.1);
+      }
+    }
+    .content {
+      margin-top: 15px;
+      > div {
+        margin: 4px 0;
+      }
+      > input {
+        font-size: 15px;
+        padding: 3px;
+        width: 300px;
+      }
+    }
+  }
+}
+.btn {
+  margin-top: 10px;
+}

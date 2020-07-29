@@ -1,0 +1,18 @@
+<div [class]="isShow ? 'popup active' : 'popup'">
+  <div class="popup__box">
+    <div class="close-btn" (click)="close()"><span>x</span></div>
+    <div class="content">
+      <div>Название:</div>
+      <input [(ngModel)]="product.name" />
+      <div>Описание:</div>
+      <input [(ngModel)]="product.description" />
+      <div>Категория:</div>
+      <input [(ngModel)]="product.category" />
+      <div>Цена:</div>
+      <input type="number" [(ngModel)]="product.price" />
+      <div>
+        <button class="btn btn_bgGreen" (click)="save()">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>
