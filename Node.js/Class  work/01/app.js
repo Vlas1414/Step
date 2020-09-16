@@ -4,10 +4,15 @@ const welcome = require('./welcome');
 const settings = require('./settings');
 const express = require('express');
 const app = express();
+const ipFilter = require('express-ipfilter').IpFilter;
+const ips = ['127.0.0.1'];
+
 
 //регистрация папки public
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: false }));
+//app.use(ipFilter(ips));
+
 
 /*http.createServer((req, resp) => {
     //console.log(req);
@@ -34,7 +39,8 @@ app.use('/about', (req, resp, next) => {
 });
 
 app.get('/', (req, resp) => {
-    resp.send('<h1>Home page</h1>');
+    console.log(req.connection.remoteAddress);
+    resp.send('<h1>Home 1page</h1>');
 });
 
 app.get('/about', (req, resp) => {

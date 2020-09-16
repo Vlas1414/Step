@@ -1,0 +1,14 @@
+<h1>Hello, Handlebars!</h1>
+{{#if message}}
+<p>{{message}}</p>
+{{/if}}
+<ul>
+    {{#each arr}}
+    <li>{{this}}</li>
+    {{/each}}
+</ul>
+<ul>
+    {{#each people}}
+    <li>{{lastname}} {{firstname}} {{age}} - {{position.name}}</li>
+    {{/each}}
+</ul>
